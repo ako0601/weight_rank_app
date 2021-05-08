@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:weightrankapp/model/model_ranker.dart';
+import 'package:weightrankapp/widget/carousel_slider.dart';
+import 'package:weightrankapp/widget/rankings_list.dart';
 
-class HomeScreen extends StatefulWidget {
-  _HomeScreenState createState() => _HomeScreenState();
+class RankingScreen extends StatefulWidget {
+  _RankingScreenState createState() => _RankingScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _RankingScreenState extends State<RankingScreen> {
   List<Ranker> rankers = [
     Ranker.fromMap({
       'name': 'Barbara Palvin',
@@ -27,7 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return TopBar();
+    return ListView(
+      children: <Widget>[
+        TopBar(),
+        CarouselImage(rankers: rankers),
+        RankerList()
+      ],
+    );
   }
 }
 
@@ -47,21 +55,21 @@ class TopBar extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(right: 1),
             child: Text(
-              'Something',
+              'Deadlift',
               style: TextStyle(fontSize: 14),
             ),
           ),
           Container(
             padding: EdgeInsets.only(right: 1),
             child: Text(
-              'Something2',
+              'Squat',
               style: TextStyle(fontSize: 14),
             ),
           ),
           Container(
             padding: EdgeInsets.only(right: 1),
             child: Text(
-              'Something3',
+              'Bench Press',
               style: TextStyle(fontSize: 14),
             ),
           )

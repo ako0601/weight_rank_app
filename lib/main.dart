@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weightrankapp/screen/home_screen.dart';
+import 'package:weightrankapp/screen/ranking_screen.dart';
 import 'package:weightrankapp/widget/bottom_bar.dart';
 
 void main() {
@@ -27,17 +27,17 @@ class _MyAppState extends State<MyApp> {
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
-              Container(
-                child: Center(
-                  child: Text('Rank'),
-                ),
-              ),
+              RankingScreen(),
               Container(
                 child: Center(
                   child: Text('Search'),
                 ),
               ),
-              HomeScreen(),
+              Container(
+                child: Center(
+                  child: Text('Home'),
+                ),
+              ),
               Container(
                 child: Center(
                   child: Text('My page'),

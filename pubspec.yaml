@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  carousel_slider:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -49,6 +50,9 @@ flutter:
     - images/barbell.png
     - images/profile_dummy.jpg
     - images/rope.jpg
+    - images/gold.jpg
+    - images/silver.jpg
+    - images/bronze.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
