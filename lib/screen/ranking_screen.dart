@@ -31,11 +31,41 @@ class _RankingScreenState extends State<RankingScreen> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
+        Logo(),
         TopBar(),
         CarouselImage(rankers: rankers),
         RankerList()
       ],
     );
+  }
+}
+
+class Logo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.only(left: 10, right: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Image.asset(
+              'images/barbell.png',
+              fit: BoxFit.contain,
+              height: 40,
+            ),
+            Container(
+                height: 30,
+                child: Row(
+                  children: <Widget>[
+                    Text('Jane Cooper', style: TextStyle(fontSize: 11)),
+                    CircleAvatar(
+                      radius: 20,
+                      backgroundImage: AssetImage('./images/profile_dummy.jpg'),
+                    )
+                  ],
+                ))
+          ],
+        ));
   }
 }
 
@@ -47,10 +77,12 @@ class TopBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Image.asset(
-            'images/barbell.png',
-            fit: BoxFit.contain,
-            height: 40,
+          Container(
+            padding: EdgeInsets.only(right: 1),
+            child: Text(
+              'Total',
+              style: TextStyle(fontSize: 14),
+            ),
           ),
           Container(
             padding: EdgeInsets.only(right: 1),

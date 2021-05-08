@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:weightrankapp/screen/home_screen.dart';
 import 'package:weightrankapp/screen/ranking_screen.dart';
+import 'package:weightrankapp/screen/routin_screen.dart';
 import 'package:weightrankapp/widget/bottom_bar.dart';
 
 void main() {
@@ -33,21 +35,13 @@ class _MyAppState extends State<MyApp> {
                   child: Text('Search'),
                 ),
               ),
-              Container(
-                child: Center(
-                  child: Text('Home'),
-                ),
-              ),
+              HomeScreen(),
               Container(
                 child: Center(
                   child: Text('My page'),
                 ),
               ),
-              Container(
-                child: Center(
-                  child: Text('Routin'),
-                ),
-              ),
+              RoutinScreen(),
             ],
           ),
           bottomNavigationBar: Bottom(),
