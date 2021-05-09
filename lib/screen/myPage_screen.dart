@@ -208,77 +208,6 @@ class PersonalRecords extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        color: Colors.grey,
-                        width: 110,
-                        height: 110,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            IconButton(
-                                icon: Icon(Icons.add_photo_alternate_rounded),
-                                iconSize: 40,
-                                onPressed: null),
-                            Text(
-                              'Deadlift',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        color: Colors.grey,
-                        width: 110,
-                        height: 110,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            IconButton(
-                                icon: Icon(Icons.add_photo_alternate_rounded),
-                                iconSize: 40,
-                                onPressed: null),
-                            Text(
-                              'Squat',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        color: Colors.grey,
-                        width: 110,
-                        height: 110,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            IconButton(
-                                icon: Icon(Icons.add_photo_alternate_rounded),
-                                iconSize: 40,
-                                onPressed: null),
-                            Text(
-                              'Bench Press',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
                   margin: EdgeInsets.only(top: 15),
                   child: Column(
                     children: [
@@ -288,6 +217,211 @@ class PersonalRecords extends StatelessWidget {
                           fontSize: 15,
                           color: Colors.black,
                         ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 1,
+                              right: 1,
+                            ),
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.green,
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 1,
+                              right: 1,
+                            ),
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.green,
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 1,
+                              right: 1,
+                            ),
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.red,
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 1,
+                              right: 1,
+                            ),
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.green,
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 1,
+                              right: 1,
+                            ),
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.grey,
+                            ),
+                            width: 110,
+                            height: 110,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                    icon:
+                                        Icon(Icons.add_photo_alternate_rounded),
+                                    iconSize: 40,
+                                    onPressed: null),
+                                Text(
+                                  'Deadlift',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 5),
+                            width: 110,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.grey,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'kg',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.grey,
+                            ),
+                            width: 110,
+                            height: 110,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                    icon:
+                                        Icon(Icons.add_photo_alternate_rounded),
+                                    iconSize: 40,
+                                    onPressed: null),
+                                Text(
+                                  'Squat',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 5),
+                            width: 110,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.grey,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'kg',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.grey,
+                            ),
+                            width: 110,
+                            height: 110,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                    icon:
+                                        Icon(Icons.add_photo_alternate_rounded),
+                                    iconSize: 40,
+                                    onPressed: null),
+                                Text(
+                                  'Bench Press',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 5),
+                            width: 110,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.grey,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'kg',
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

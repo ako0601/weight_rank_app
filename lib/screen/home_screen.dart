@@ -70,13 +70,19 @@ class Postings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Column(
-      children: <Widget>[
-        Container(
-          width: 200,
-          color: Colors.white,
-        )
-      ],
-    ));
+      child: Column(
+        children: <Widget>[
+          Container(
+            width: 110,
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Deadlift',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
