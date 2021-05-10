@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weightrankapp/model/model_ranker.dart';
+import 'package:weightrankapp/screen/account_setting_screen.dart';
 
 class MyScreen extends StatefulWidget {
   _MyScreenState createState() => _MyScreenState();
@@ -42,17 +43,40 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(left: 10, right: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(icon: Icon(Icons.arrow_back), onPressed: null),
-            Container(
-                child: Row(children: <Widget>[
-              IconButton(icon: Icon(Icons.settings), onPressed: null),
-            ]))
-          ],
-        ));
+      margin: EdgeInsets.only(
+        left: 10,
+        right: 10,
+        top: 10,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              MaterialPageRoute route = MaterialPageRoute(
+                  builder: (context) =>
+                      AccountSettingScreen()); // 여기 다른 걸로 바꿔야됨
+              Navigator.push(context, route);
+            },
+          ),
+          Container(
+            child: Row(
+              children: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.settings),
+                  onPressed: () {
+                    MaterialPageRoute route = MaterialPageRoute(
+                        builder: (context) => AccountSettingScreen());
+                    Navigator.push(context, route);
+                  },
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 

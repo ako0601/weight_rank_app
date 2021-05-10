@@ -44,7 +44,11 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(left: 10, right: 10),
+        margin: EdgeInsets.only(
+          left: 10,
+          right: 10,
+          top: 10,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -73,6 +77,7 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 10),
       padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,7 +109,7 @@ class TopBar extends StatelessWidget {
               'Bench Press',
               style: TextStyle(fontSize: 14),
             ),
-          )
+          ),
         ],
       ),
     );

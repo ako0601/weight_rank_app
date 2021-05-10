@@ -31,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListView(
       children: <Widget>[
         Logo(),
-        Postings(),
       ],
     );
   }
@@ -41,44 +40,43 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(left: 10, right: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(icon: Icon(Icons.arrow_back), onPressed: null),
-            Container(
-                height: 60,
-                child: Column(
-                  children: <Widget>[
-                    CircleAvatar(
-                      radius: 20,
-                      backgroundImage: AssetImage('./images/profile_dummy.jpg'),
-                    ),
-                    Text('Jane Cooper', style: TextStyle(fontSize: 11))
-                  ],
-                )),
-            Container(
-                child: Row(children: <Widget>[
-              IconButton(icon: Icon(Icons.add), onPressed: null),
-            ]))
-          ],
-        ));
-  }
-}
-
-class Postings extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
+      margin: EdgeInsets.only(
+        left: 10,
+        right: 10,
+        top: 10,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: null,
+          ),
           Container(
-            width: 110,
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Deadlift',
-              ),
+            height: 60,
+            child: Column(
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 20,
+                  backgroundImage: AssetImage('./images/profile_dummy.jpg'),
+                ),
+                Text(
+                  'Jane Cooper',
+                  style: TextStyle(
+                    fontSize: 11,
+                  ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            child: Row(
+              children: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.add),
+                  onPressed: null,
+                ),
+              ],
             ),
           ),
         ],
