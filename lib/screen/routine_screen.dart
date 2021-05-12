@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weightrankapp/model/model_ranker.dart';
-import 'package:weightrankapp/screen/add_routin_screen.dart';
+import 'package:weightrankapp/screen/add_routine_screen.dart';
 import 'package:weightrankapp/screen/calendar_screen.dart';
 import 'package:weightrankapp/screen/do_screen.dart';
 
-class RoutinScreen extends StatefulWidget {
-  _RoutinScreenState createState() => _RoutinScreenState();
+class RoutineScreen extends StatefulWidget {
+  _RoutineScreenState createState() => _RoutineScreenState();
 }
 
-class _RoutinScreenState extends State<RoutinScreen> {
+class _RoutineScreenState extends State<RoutineScreen> {
   @override
   void initState() {
     super.initState();
@@ -51,7 +51,7 @@ class _RoutinScreenState extends State<RoutinScreen> {
                         backgroundImage:
                             AssetImage('./images/profile_dummy.jpg'),
                       ),
-                      Text('Jane Cooper', style: TextStyle(fontSize: 11))
+                      Text('Jane Cooper', style: TextStyle(fontSize: 13))
                     ],
                   )),
               Container(
@@ -61,7 +61,7 @@ class _RoutinScreenState extends State<RoutinScreen> {
                       icon: Icon(Icons.add),
                       onPressed: () {
                         MaterialPageRoute route = MaterialPageRoute(
-                            builder: (context) => AddRoutinScreen());
+                            builder: (context) => AddRoutineScreen());
                         Navigator.push(context, route);
                       },
                     ),

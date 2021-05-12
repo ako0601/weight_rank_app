@@ -19,7 +19,7 @@ class Bottom extends StatelessWidget {
               ),
               child: Text(
                 'Rank',
-                style: TextStyle(fontSize: 9),
+                style: TextStyle(fontSize: 11),
               ),
             ),
             Tab(
@@ -28,8 +28,8 @@ class Bottom extends StatelessWidget {
                 size: 18,
               ),
               child: Text(
-                'search',
-                style: TextStyle(fontSize: 9),
+                'Search',
+                style: TextStyle(fontSize: 11),
               ),
             ),
             Tab(
@@ -39,7 +39,7 @@ class Bottom extends StatelessWidget {
               ),
               child: Text(
                 'Home',
-                style: TextStyle(fontSize: 9),
+                style: TextStyle(fontSize: 11),
               ),
             ),
             Tab(
@@ -49,7 +49,7 @@ class Bottom extends StatelessWidget {
               ),
               child: Text(
                 'My Page',
-                style: TextStyle(fontSize: 9),
+                style: TextStyle(fontSize: 11),
               ),
             ),
             Tab(
@@ -58,8 +58,8 @@ class Bottom extends StatelessWidget {
                 size: 18,
               ),
               child: Text(
-                'Routin',
-                style: TextStyle(fontSize: 9),
+                'Routine',
+                style: TextStyle(fontSize: 11),
               ),
             ),
           ],

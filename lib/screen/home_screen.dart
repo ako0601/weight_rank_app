@@ -71,7 +71,7 @@ class Logo extends StatelessWidget {
                 Text(
                   'Jane Cooper',
                   style: TextStyle(
-                    fontSize: 11,
+                    fontSize: 13,
                   ),
                 )
               ],
