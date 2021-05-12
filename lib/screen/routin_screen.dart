@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:weightrankapp/model/model_ranker.dart';
 import 'package:weightrankapp/screen/add_routin_screen.dart';
 import 'package:weightrankapp/screen/calendar_screen.dart';
+import 'package:weightrankapp/screen/do_screen.dart';
 
 class RoutinScreen extends StatefulWidget {
   _RoutinScreenState createState() => _RoutinScreenState();
@@ -110,7 +111,7 @@ class _RoutinScreenState extends State<RoutinScreen> {
                                   icon: Icon(Icons.play_circle_outline_rounded),
                                   onPressed: () {
                                     MaterialPageRoute route = MaterialPageRoute(
-                                        builder: (context) => CalendarScreen());
+                                        builder: (context) => DoScreen());
                                     Navigator.push(context, route);
                                   },
                                   color: Colors.black,
@@ -225,21 +226,6 @@ class _RoutinScreenState extends State<RoutinScreen> {
                               fontSize: 20,
                             ),
                           ),
-                          Container(
-                            child: Row(
-                              children: <Widget>[
-                                IconButton(
-                                  icon: Icon(Icons.play_circle_outline_rounded),
-                                  onPressed: () {
-                                    MaterialPageRoute route = MaterialPageRoute(
-                                        builder: (context) => CalendarScreen());
-                                    Navigator.push(context, route);
-                                  },
-                                  color: Colors.black,
-                                ),
-                              ],
-                            ),
-                          ),
                         ],
                       ),
                     ),
@@ -347,21 +333,6 @@ class _RoutinScreenState extends State<RoutinScreen> {
                               fontSize: 20,
                             ),
                           ),
-                          Container(
-                            child: Row(
-                              children: <Widget>[
-                                IconButton(
-                                  icon: Icon(Icons.play_circle_outline_rounded),
-                                  onPressed: () {
-                                    MaterialPageRoute route = MaterialPageRoute(
-                                        builder: (context) => CalendarScreen());
-                                    Navigator.push(context, route);
-                                  },
-                                  color: Colors.black,
-                                ),
-                              ],
-                            ),
-                          ),
                         ],
                       ),
                     ),
@@ -467,21 +438,6 @@ class _RoutinScreenState extends State<RoutinScreen> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
-                            ),
-                          ),
-                          Container(
-                            child: Row(
-                              children: <Widget>[
-                                IconButton(
-                                  icon: Icon(Icons.play_circle_outline_rounded),
-                                  onPressed: () {
-                                    MaterialPageRoute route = MaterialPageRoute(
-                                        builder: (context) => CalendarScreen());
-                                    Navigator.push(context, route);
-                                  },
-                                  color: Colors.black,
-                                ),
-                              ],
                             ),
                           ),
                         ],

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weightrankapp/model/model_ranker.dart';
+import 'package:weightrankapp/screen/add_posting_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
@@ -53,7 +54,11 @@ class Logo extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: Icon(Icons.arrow_back),
-            onPressed: null,
+            onPressed: () {
+              MaterialPageRoute route =
+                  MaterialPageRoute(builder: (context) => AddPostingScreen());
+              Navigator.push(context, route);
+            },
           ),
           Container(
             height: 60,
@@ -77,7 +82,11 @@ class Logo extends StatelessWidget {
               children: <Widget>[
                 IconButton(
                   icon: Icon(Icons.add),
-                  onPressed: null,
+                  onPressed: () {
+                    MaterialPageRoute route = MaterialPageRoute(
+                        builder: (context) => AddPostingScreen());
+                    Navigator.push(context, route);
+                  },
                 ),
               ],
             ),
@@ -92,8 +101,7 @@ class Post extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20),
-      color: Colors.white,
+      margin: EdgeInsets.only(bottom: 20, top: 3),
       child: Column(
         children: [
           Container(
@@ -116,13 +124,13 @@ class Post extends StatelessWidget {
                           children: [
                             Text('12',
                                 style: TextStyle(
-                                    fontSize: 11, color: Colors.black)),
+                                    fontSize: 11, color: Colors.white)),
                             Text('Michel Cooper',
                                 style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
+                                    fontSize: 18, color: Colors.white)),
                             Text('MVP Gym',
                                 style: TextStyle(
-                                    fontSize: 11, color: Colors.black)),
+                                    fontSize: 11, color: Colors.white)),
                           ],
                         ),
                       ),
@@ -131,7 +139,7 @@ class Post extends StatelessWidget {
                 ),
                 Icon(
                   Icons.my_library_add_outlined,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ],
             ),
@@ -144,7 +152,7 @@ class Post extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.only(left: 10, right: 10),
                     child: Text('Chest',
-                        style: TextStyle(fontSize: 18, color: Colors.black)),
+                        style: TextStyle(fontSize: 18, color: Colors.white)),
                   ),
                   Container(
                     padding: EdgeInsets.only(left: 20, right: 20),
@@ -154,24 +162,24 @@ class Post extends StatelessWidget {
                       children: [
                         Text('Bench Press (10reps / 4sets)',
                             style:
-                                TextStyle(color: Colors.black, fontSize: 15)),
+                                TextStyle(color: Colors.white, fontSize: 15)),
                         Text('Incline Bench Press (8reps / 4sets)',
                             style:
-                                TextStyle(color: Colors.black, fontSize: 15)),
+                                TextStyle(color: Colors.white, fontSize: 15)),
                         Text('Decline Bench Press (8reps / 4sets)',
                             style:
-                                TextStyle(color: Colors.black, fontSize: 15)),
+                                TextStyle(color: Colors.white, fontSize: 15)),
                         Text('Flat Dumbell Bench Press (8reps / 4sets)',
                             style:
-                                TextStyle(color: Colors.black, fontSize: 15)),
+                                TextStyle(color: Colors.white, fontSize: 15)),
                         Text('Incline Dumbbell Bench Press (8reps / 4sets)',
                             style:
-                                TextStyle(color: Colors.black, fontSize: 15)),
+                                TextStyle(color: Colors.white, fontSize: 15)),
                         Text('Decline Dumbbell Bench Press (8reps / 3sets)',
                             style:
-                                TextStyle(color: Colors.black, fontSize: 15)),
+                                TextStyle(color: Colors.white, fontSize: 15)),
                         Text('Push Ups (12reps / 5sets)',
-                            style: TextStyle(color: Colors.black, fontSize: 15))
+                            style: TextStyle(color: Colors.white, fontSize: 15))
                       ],
                     ),
                   ),
@@ -194,7 +202,7 @@ class Post extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.only(left: 10, right: 10),
-            margin: EdgeInsets.only(bottom: 5),
+            margin: EdgeInsets.only(bottom: 5, top: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -202,21 +210,21 @@ class Post extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.favorite_outline_rounded,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                     Icon(
                       Icons.mode_comment_outlined,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                     Icon(
                       Icons.ios_share,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ],
                 ),
                 Icon(
                   Icons.bookmark_border_rounded,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ],
             ),
