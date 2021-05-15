@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dropdown_formfield/dropdown_formfield.dart';
+import 'package:weightrankapp/src/components/dropdown_button.dart';
 
 class AddRoutineScreen extends StatefulWidget {
   _AddRoutineScreenState createState() => _AddRoutineScreenState();
@@ -18,14 +19,14 @@ class _AddRoutineScreenState extends State<AddRoutineScreen> {
       appBar: AppBar(title: Text('Add Routine')),
       body: Column(
         children: [
-          RoutineAddForm(),
+          Placement(),
         ],
       ),
     );
   }
 }
 
-class RoutineAddForm extends StatelessWidget {
+class Placement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,13 +43,7 @@ class RoutineAddForm extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          Text(
-            "Dropdown box 들어가야됨",
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.black,
-            ),
-          ),
+          DropdownButtonWidget(),
           Text(
             "Routine",
             style: TextStyle(
@@ -56,13 +51,7 @@ class RoutineAddForm extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          Text(
-            "Dropdown box 들어가야됨",
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.black,
-            ),
-          ),
+          DropdownButtonWidget(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -84,7 +73,7 @@ class RoutineAddForm extends StatelessWidget {
           ),
           RaisedButton(
             onPressed: () {
-              print('Clicked');
+              print('Add');
             },
             child: Text('Add'),
             textColor: Colors.white,
@@ -150,7 +139,7 @@ class RoutineAddForm extends StatelessWidget {
           ),
           RaisedButton(
             onPressed: () {
-              print('Clicked');
+              print('Submit');
             },
             child: Text('Submit'),
             textColor: Colors.white,

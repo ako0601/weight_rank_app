@@ -8,6 +8,7 @@ class WorkoutCountScreen extends StatefulWidget {
 
 class _WorkoutCountScreenState extends State<WorkoutCountScreen> {
   int _counter = 0;
+  bool _complish = false;
 
   void _increaseCount() {
     setState(() {
@@ -17,6 +18,7 @@ class _WorkoutCountScreenState extends State<WorkoutCountScreen> {
         MaterialPageRoute route =
             MaterialPageRoute(builder: (context) => DoScreen());
         Navigator.push(context, route);
+        _complish = true;
       }
     });
   }

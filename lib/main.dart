@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:weightrankapp/screen/home_screen.dart';
 import 'package:weightrankapp/screen/myPage_screen.dart';
 import 'package:weightrankapp/screen/ranking_screen.dart';
 import 'package:weightrankapp/screen/routine_screen.dart';
+import 'package:weightrankapp/src/controller/dropdown_button_controller.dart';
 import 'package:weightrankapp/widget/bottom_bar.dart';
 
 void main() {
@@ -17,8 +19,11 @@ class _MyAppState extends State<MyApp> {
   TabController controller;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'WeightRank',
+      initialBinding: BindingsBuilder(() {
+        Get.put(DropdownButtonController());
+      }),
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.black,

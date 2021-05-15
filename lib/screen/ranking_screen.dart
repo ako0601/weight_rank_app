@@ -65,11 +65,11 @@ class Logo extends StatelessWidget {
                     CircleAvatar(
                       radius: 20,
                       backgroundImage: AssetImage('./images/profile_dummy.jpg'),
-                    )
+                    ),
                   ],
-                ))
+                ),),
           ],
-        ));
+        ),);
   }
 }
 
