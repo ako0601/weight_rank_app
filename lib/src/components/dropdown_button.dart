@@ -15,6 +15,13 @@ class DropdownButtonWidget extends GetView<DropdownButtonController> {
         },
         items: [
           DropdownMenuItem(
+            value: 0,
+            child: Text(
+              "Choose today's Workout",
+              style: TextStyle(color: Colors.black),
+            ),
+          ),
+          DropdownMenuItem(
             value: 1,
             child: Text(
               'Chest',
@@ -22,21 +29,21 @@ class DropdownButtonWidget extends GetView<DropdownButtonController> {
             ),
           ),
           DropdownMenuItem(
-            value: 0,
+            value: 2,
             child: Text(
               'Shoulder',
               style: TextStyle(color: Colors.black),
             ),
           ),
           DropdownMenuItem(
-            value: 2,
+            value: 3,
             child: Text(
               'Thigh',
               style: TextStyle(color: Colors.black),
             ),
           ),
           DropdownMenuItem(
-            value: 3,
+            value: 4,
             child: Text(
               'Bicep',
               style: TextStyle(color: Colors.black),

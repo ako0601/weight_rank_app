@@ -1,17 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weightrankapp/screen/workout_part_detail_choose_screen.dart';
+import 'package:weightrankapp/screen/workout_part_choose_screen.dart';
 
-class AddRoutineScreen extends StatefulWidget {
-  _AddRoutineScreenState createState() => _AddRoutineScreenState();
+class AddTodayWorkoutScreen extends StatefulWidget {
+  _AddTodayWorkoutState createState() => _AddTodayWorkoutState();
 }
 
-class _AddRoutineScreenState extends State<AddRoutineScreen> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
+class _AddTodayWorkoutState extends State<AddTodayWorkoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +14,7 @@ class _AddRoutineScreenState extends State<AddRoutineScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Routine",
+            "Today's Workout",
             style: TextStyle(
               fontSize: 24,
               color: Colors.black,
@@ -29,13 +24,14 @@ class _AddRoutineScreenState extends State<AddRoutineScreen> {
               onPressed: () {
                 MaterialPageRoute route = MaterialPageRoute(
                     builder: (context) =>
-                        WorkoutPartDetailChooseScreen()); // 여기 다른 걸로 바꿔야됨
+                        WorkoutPartChooseScreen()); // 여기 다른 걸로 바꿔야됨
                 Navigator.push(context, route);
               },
               child: Icon(Icons.add)),
           Container(
             color: Colors.grey[200],
             padding: EdgeInsets.all(20),
+            margin: EdgeInsets.only(bottom: 40),
           ),
         ],
       ),

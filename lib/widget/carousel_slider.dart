@@ -8,28 +8,9 @@ class CarouselImage extends StatefulWidget {
 }
 
 class _CarouselImageState extends State<CarouselImage> {
-  List<Ranker> rankers;
-  List<Widget> images;
-  List<String> id;
-  List<bool> follow;
-  // List<String> profile;
-  // List<String> gym_name;
-  // List<String> bench;
-  // List<String> squat;
-  // List<String> deadlift;
-  // List<String> total;
-  // List<String> current_ranking;
-  int _currentPage = 0;
-  String _currentId;
-
   @override
   void initState() {
     super.initState();
-    rankers = widget.rankers;
-    images = rankers.map((e) => Image.asset('./images/' + e.profile)).toList();
-    id = rankers.map((e) => e.id).toList();
-    follow = rankers.map((e) => e.follow).toList();
-    _currentId = id[0];
   }
 
   @override

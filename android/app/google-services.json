@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "247922584217",
+    "project_id": "weight-rank-app",
+    "storage_bucket": "weight-rank-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247922584217:android:a7b3e26244b9d2c9466608",
+        "android_client_info": {
+          "package_name": "com.example.weightrankapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247922584217-l43j0qhu9t4tdlrn23lq0donmp5q0jip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCew9ikYT4-AxgyyVL_2dvuzEwai3pTAkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247922584217-l43j0qhu9t4tdlrn23lq0donmp5q0jip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

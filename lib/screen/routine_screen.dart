@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weightrankapp/model/model_ranker.dart';
 import 'package:weightrankapp/screen/add_routine_screen.dart';
+import 'package:weightrankapp/screen/add_routine_whole_screen.dart';
 import 'package:weightrankapp/screen/calendar_screen.dart';
 import 'package:weightrankapp/screen/do_screen.dart';
 
@@ -61,7 +61,7 @@ class _RoutineScreenState extends State<RoutineScreen> {
                       icon: Icon(Icons.add),
                       onPressed: () {
                         MaterialPageRoute route = MaterialPageRoute(
-                            builder: (context) => AddRoutineScreen());
+                            builder: (context) => AddRoutineWholeScreen());
                         Navigator.push(context, route);
                       },
                     ),
