@@ -27,88 +27,62 @@ class _RankingScreenState extends State<RankingScreen> {
     super.initState();
   }
 
+  final category = ['Total', 'Deadlift', 'Squat', 'Bench Press'];
+
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        Logo(),
-        TopBar(),
-        CarouselImage(rankers: rankers),
-        RankerList()
-      ],
+    return DefaultTabController(
+      length: category.length,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Logo(),
+          bottom: TabBar(
+            tabs: category.map(
+              (String item) {
+                return Tab(
+                  text: item,
+                );
+              },
+            ).toList(),
+            isScrollable: true,
+          ),
+        ),
+        body: TabBarView(
+          children: category.map(
+            (String item) {
+              return Container(
+                  child: Column(
+                children: [
+                  CarouselImage(),
+                  RankerList(),
+                ],
+              ));
+            },
+          ).toList(),
+        ),
+      ),
     );
   }
 }
 
 class Logo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.only(
-          left: 10,
-          right: 10,
-          top: 10,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Image.asset(
-              'images/barbell.png',
-              fit: BoxFit.contain,
-              height: 40,
-            ),
-            Container(
-                height: 30,
-                child: Row(
-                  children: <Widget>[
-                    Text('Jane Cooper', style: TextStyle(fontSize: 11)),
-                    CircleAvatar(
-                      radius: 20,
-                      backgroundImage: AssetImage('./images/profile_dummy.jpg'),
-                    ),
-                  ],
-                ),),
-          ],
-        ),);
-  }
-}
+  final region = ['Global', '대한민국', 'United States'];
 
-class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10),
-      padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
+      margin: EdgeInsets.only(
+        left: 10,
+        right: 10,
+        top: 10,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(right: 1),
-            child: Text(
-              'Total',
-              style: TextStyle(fontSize: 14),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(right: 1),
-            child: Text(
-              'Deadlift',
-              style: TextStyle(fontSize: 14),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(right: 1),
-            child: Text(
-              'Squat',
-              style: TextStyle(fontSize: 14),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(right: 1),
-            child: Text(
-              'Bench Press',
-              style: TextStyle(fontSize: 14),
-            ),
+          Image.asset(
+            'images/barbell.png',
+            fit: BoxFit.contain,
+            height: 40,
           ),
         ],
       ),

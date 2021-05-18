@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weightrankapp/screen/add_routine_screen.dart';
 
 class WorkoutPartDetailChooseScreen extends StatefulWidget {
   _WorkoutPartDetailChooseScreenState createState() =>
@@ -59,7 +58,7 @@ class _WorkoutPartDetailChooseScreenState
       body: ListView.builder(
         itemCount: chest.length,
         itemBuilder: (context, index) {
-          CheckboxListTile(
+          return CheckboxListTile(
             title: Text(chest[index][0]),
             value: chest[index][1],
             onChanged: (value) {
@@ -67,7 +66,7 @@ class _WorkoutPartDetailChooseScreenState
                 chest[index][1] = value;
               });
             },
-            secondary: const Icon(Icons.add),
+            secondary: Text((index + 1).toString()),
             activeColor: Colors.green,
             checkColor: Colors.white,
             isThreeLine: false,

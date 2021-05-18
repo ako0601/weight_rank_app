@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weightrankapp/model/parts.dart';
 
 class WorkoutPartChooseScreen extends StatefulWidget {
   _WorkoutPartChooseScreenState createState() =>
@@ -28,7 +27,25 @@ class _WorkoutPartChooseScreenState extends State<WorkoutPartChooseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Today's Workout")),
+      appBar: AppBar(
+        title: Text("Today's Workout"),
+        centerTitle: true,
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () {
+              List deliver = [];
+              for (List i in parts) {
+                if (i[1]) {
+                  deliver.add(i[0]);
+                }
+              }
+              Navigator.pop(context, deliver);
+            },
+          ),
+        ],
+      ),
       body: ListView.builder(
         itemCount: parts.length,
         itemBuilder: (context, index) {

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weightrankapp/screen/add_routine_screen.dart';
-import 'package:weightrankapp/screen/add_today_workout_screen.dart';
+import 'package:weightrankapp/screen/workout_part_choose_screen.dart';
+import 'package:weightrankapp/screen/workout_part_detail_choose_screen.dart';
 
 class AddRoutineWholeScreen extends StatefulWidget {
   _AddRoutineWholeState createState() => _AddRoutineWholeState();
@@ -12,6 +12,8 @@ class _AddRoutineWholeState extends State<AddRoutineWholeScreen> {
   void initState() {
     super.initState();
   }
+
+  List partsResults = [];
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +27,56 @@ class _AddRoutineWholeState extends State<AddRoutineWholeScreen> {
             margin: EdgeInsets.all(10),
             child: Column(
               children: [
-                AddTodayWorkoutScreen(),
-                AddRoutineScreen(),
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Today's Workout",
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.black,
+                        ),
+                      ),
+                      RaisedButton(
+                        onPressed: () {
+                          _navigateWaiterForPart(context);
+                        },
+                        child: Icon(Icons.add),
+                      ),
+                      Container(
+                        color: Colors.grey[200],
+                        padding: EdgeInsets.all(20),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Routine",
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.black,
+                        ),
+                      ),
+                      RaisedButton(
+                          onPressed: () {
+                            MaterialPageRoute route = MaterialPageRoute(
+                                builder: (context) =>
+                                    WorkoutPartDetailChooseScreen()); // 여기 다른 걸로 바꿔야됨
+                            Navigator.push(context, route);
+                          },
+                          child: Icon(Icons.add)),
+                      Container(
+                        color: Colors.grey[200],
+                        padding: EdgeInsets.all(20),
+                      ),
+                    ],
+                  ),
+                ),
                 Column(
                   children: [
                     Row(
@@ -50,5 +100,14 @@ class _AddRoutineWholeState extends State<AddRoutineWholeScreen> {
         ],
       ),
     );
+  }
+
+  _navigateWaiterForPart(BuildContext context) async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => WorkoutPartChooseScreen()),
+    );
+
+    partsResults = result;
   }
 }
