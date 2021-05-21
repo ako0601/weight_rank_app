@@ -5,7 +5,6 @@ A new Flutter project of OAKS CORP.
 ## Getting Started
 ### About Project
 > This project was build by team OAKS CORP. Iniciation of the project was to measure weights of Bench Press, Squat, and Deadlift and compete with the whole world. 
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
