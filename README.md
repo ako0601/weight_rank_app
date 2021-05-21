@@ -1,6 +1,6 @@
-# weightrankapp
+# WeightRank
 
-A new Flutter project.
+A new Flutter project of OAKS CORP.
 
 ## Getting Started
 
